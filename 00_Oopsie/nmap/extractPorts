@@ -1,0 +1,14 @@
+file=$1
+
+ports=$(cat $file | grep -oP '\d{1,5}/open' | cut -d '/' -f 1 | xargs | tr ' ' ',')
+
+ip_address=$(cat $file | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u )
+
+#Show resumen
+
+echo "\n[*] Extracting information ...\n" 
+echo "\t[*] IP Address: $ip_address \n"
+echo "\t[*] Ports: $ports \n"
+
+echo $ports | tr -d '\n' | xclip -sel clip
+echo "[*] Ports copied to clipboard \n"
