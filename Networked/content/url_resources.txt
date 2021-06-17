@@ -1,0 +1,4 @@
+200  	  http://10.10.10.146/index.php
+200  	  http://10.10.10.146/photos.php
+200  	  http://10.10.10.146/upload.php
+200  	  http://10.10.10.146/lib.php
