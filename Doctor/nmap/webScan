@@ -1,0 +1,13 @@
+# Nmap 7.91 scan initiated Thu Jun 17 14:46:55 2021 as: nmap --script http-enum -p 80,8089 -oN webScan 10.10.10.209
+Nmap scan report for 10.10.10.209
+Host is up (0.092s latency).
+
+PORT     STATE SERVICE
+80/tcp   open  http
+| http-enum: 
+|   /css/: Potentially interesting directory w/ listing on 'apache/2.4.41 (ubuntu)'
+|   /images/: Potentially interesting directory w/ listing on 'apache/2.4.41 (ubuntu)'
+|_  /js/: Potentially interesting directory w/ listing on 'apache/2.4.41 (ubuntu)'
+8089/tcp open  unknown
+
+# Nmap done at Thu Jun 17 14:47:04 2021 -- 1 IP address (1 host up) scanned in 9.10 seconds
